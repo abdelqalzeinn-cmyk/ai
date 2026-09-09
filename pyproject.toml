@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tiny-chat-20m"
+version = "0.1.0"
+description = "A small decoder-only chatbot language model trained from scratch."
+requires-python = ">=3.11"
+dependencies = [
+  "torch>=2.4",
+  "datasets>=5.0",
+  "huggingface_hub>=0.25",
+  "tqdm>=4.66"
+]
+
+[project.scripts]
+prepare-chat-data = "tiny_chat.data:main"
+train-chat = "tiny_chat.train:main"
+chat = "tiny_chat.chat:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
