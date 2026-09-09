@@ -59,8 +59,8 @@ def main() -> None:
     config = ModelConfig(vocab_size=tokenizer.vocab_size)
     model = ChatModel(config).to(args.device)
     print(f"Parameters: {parameter_count(model):,}; device: {args.device}")
-    if not 18_000_000 <= parameter_count(model) <= 22_000_000:
-        raise ValueError("Model is outside the intended 20M parameter range")
+    if not 38_000_000 <= parameter_count(model) <= 45_000_000:
+        raise ValueError("Model is outside the intended 42M parameter range")
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.learning_rate, weight_decay=0.1)
     checkpoint = Path(args.checkpoint)
     checkpoint.parent.mkdir(parents=True, exist_ok=True)

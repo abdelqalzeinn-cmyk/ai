@@ -26,7 +26,7 @@ def test_model_shape_and_size():
     assert loss is not None
     assert len(cache) == config.layers
     assert cache[0][0].shape[1] == config.key_value_heads
-    assert 18_000_000 <= parameter_count(model) <= 22_000_000
+    assert 38_000_000 <= parameter_count(model) <= 45_000_000
 
 
 def test_cached_generation_keeps_growing_sequence():

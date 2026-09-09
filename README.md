@@ -1,8 +1,8 @@
-# Tiny Chat 20M
+# Tiny Chat 42M
 
-A from-scratch, decoder-only Transformer chatbot using PyTorch. The default model has about 20 million trainable parameters and uses a compact byte-level BPE tokenizer with UTF-8 fallback.
+A from-scratch, decoder-only Transformer chatbot using PyTorch. The default model has about 42 million trainable parameters and uses a compact byte-level BPE tokenizer with UTF-8 fallback.
 
-The model uses mobile-oriented ideas found in efficient Gemma-style designs: RMSNorm, rotary position embeddings, SwiGLU, grouped-query attention with 2 key/value heads, tied input/output embeddings, and a KV cache during generation. This is not Gemma 4 code or a claim of matching Gemma quality; it is a small, trainable architecture using similar efficiency principles.
+The model uses mobile-oriented ideas found in efficient Gemma-style designs: RMSNorm, rotary position embeddings, SwiGLU, grouped-query attention with 2 key/value heads, tied input/output embeddings, and a KV cache during generation. This is not Gemma 4 code or a claim of matching Gemma quality; it is a compact, trainable architecture using similar efficiency principles.
 
 ## 1. Create the environment
 

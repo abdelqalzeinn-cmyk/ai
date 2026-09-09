@@ -9,7 +9,7 @@ class ModelConfig:
     layers: int = 6
     heads: int = 8
     key_value_heads: int = 2
-    intermediate_size: int = 1792
+    intermediate_size: int = 4096
     dropout: float = 0.1
 
     @property
